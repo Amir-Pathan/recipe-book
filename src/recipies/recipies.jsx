@@ -18,9 +18,6 @@ class Recipies extends Component{
 
   getAllRecipies(){
 
-    console.log('work');
-
-
     services.getData('recipies').then((res)=>{
 
       this.setState({
@@ -46,8 +43,6 @@ class Recipies extends Component{
   }
 
   componentDidUpdate(prevProps){
-
-    console.log(prevProps,this.props.no);
 
     if(prevProps.n!==this.props.n){
 

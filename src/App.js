@@ -19,8 +19,16 @@ function App() {
 
   useEffect(()=>{
   
+    let fvrt = localStorage.getItem('favourite')
 
+    fvrt = JSON.parse(fvrt)
 
+    if(!fvrt){
+
+      localStorage.setItem('favourite',JSON.stringify([]))
+
+    }
+ 
     if(!isAuntenticated()){
  
        navigate('/signup')
